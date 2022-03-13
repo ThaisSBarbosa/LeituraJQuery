@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Pattern;
 
+///Separa o arquivo recebido em tokens.
 public class SeparadorDeTokens {
 
 	public static List<String> DivideTokens(String textoCompleto) throws Exception{
