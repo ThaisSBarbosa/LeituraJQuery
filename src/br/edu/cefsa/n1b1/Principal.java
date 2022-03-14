@@ -22,8 +22,15 @@ public class Principal {
 	private static String leArquivoJQuery() throws Exception {
 		Scanner scanner = new Scanner(new File("jquery.txt"));
 		String allString = "";
+		
 		while (scanner.hasNextLine()) {
-			allString += scanner.nextLine();
+			
+			String line = scanner.nextLine();
+			
+			if (!line.trim().startsWith("//")) {
+                allString += line;
+            }
+			
 		}
 		return allString;
 	}
