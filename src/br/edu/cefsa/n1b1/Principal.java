@@ -10,14 +10,9 @@ public class Principal {
 		String allString = Utils.leArquivoTexto("jquery.txt");						
 		List<String> listaDeTokens = SeparadorDeTokens.DivideTokens(allString);
 		List<Lexema> lexemas = AnalisadorDeTokens.AnalisaTokens(listaDeTokens);
-		
-		
-		//String saida = ConstrutorDeSaida.MontaTabela(lexemas);		
-		//System.out.println(saida);
-		
 		ConstrutorDeSaida.gravaDados(lexemas);
 		
 		//teste
-		listaDeTokens.forEach(System.out::println);
+		//listaDeTokens.forEach(System.out::println);
 	}
 }

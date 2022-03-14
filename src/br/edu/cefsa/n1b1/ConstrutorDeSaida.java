@@ -17,6 +17,7 @@ public class ConstrutorDeSaida {
 
 		for (Lexema lexema : lexemas) {
 			escreveArquivo.write(lexema.toString());
+			System.out.println(lexema.toString());
 			escreveArquivo.newLine();
 			escreveArquivo.flush();
 		}

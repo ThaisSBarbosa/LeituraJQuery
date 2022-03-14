@@ -23,6 +23,11 @@ public class SeparadorDeTokens {
 		textoCompleto = textoCompleto.replace(")", " ) ");
 		textoCompleto = textoCompleto.replace(":", " : ");
 		textoCompleto = textoCompleto.replace("?", " ? ");
+		textoCompleto = textoCompleto.replace("[", " [ ");
+		textoCompleto = textoCompleto.replace("]", " ] ");
+		textoCompleto = textoCompleto.replace("!", " ! ");
+		textoCompleto = textoCompleto.replace("&&", " && ");
+		textoCompleto = textoCompleto.replace("||", " || ");
 
 		var listComVazios = Arrays.asList(textoCompleto.split("[" + Pattern.quote(" #@_\\/*") + "]+"));
 
