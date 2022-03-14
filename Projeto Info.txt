@@ -1,0 +1,7 @@
+Carlos Henrique Bezerra Gonçalves		RA 082190011
+Gabriel dos Santos Teixeira				RA 082190038
+Jessica Prado Costa						RA 082190033
+Maria Fábia Dota Carvalho				RA 082190003
+Thais Santos Barbosa					RA 082190019
+
+LINK GITHUB: https://github.com/ThaisSBarbosa/LeituraJQuery
