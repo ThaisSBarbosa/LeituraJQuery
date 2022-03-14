@@ -37,6 +37,36 @@ public class AnalisadorDeTokens {
 		if (palavrasReservadas.contains(token))
 			tipo = Tipo.PALAVRARESERVADA;
 		
+		if (token == "true" || token == "false")
+			tipo = Tipo.BOOLEAN;
+		
+		
+		if (token.matches("(\\d)*.(\\d)*")) {
+			tipo = tipo.DOUBLE;
+			
+//			if (Float.valueOf(token) >= -340282347 * Math.pow(10, 38) && Float.valueOf(token) <= 340282347 * Math.pow(10, 38)) {
+//				tipo = tipo.FLOAT;
+//			}
+			
+			if (token.matches("[0-9]+")) {
+				tipo = tipo.LONG;
+				
+				if (Integer.valueOf(token) >= -2147483648 && Integer.valueOf(token) <= 2147483647) {
+					tipo = tipo.INT;
+				}
+				
+				if (Integer.valueOf(token) >= -32.768 && Integer.valueOf(token) <= 32.767) {
+					tipo = tipo.SHORT;
+				}
+				
+				if (Integer.valueOf(token) >= -128 && Integer.valueOf(token) <= 127) {
+					tipo = tipo.BYTE;
+				}			
+			}
+		}
+
+		
+		
 		return tipo;
 	}
 	
