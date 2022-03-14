@@ -1,14 +1,12 @@
 package br.edu.cefsa.n1b1;
 
-import java.io.File;
 import java.util.List;
-import java.util.Scanner;
 
 public class Principal {
 
 	public static void main(String[] args) throws Exception {
 		
-		String allString = leArquivoJQuery();						
+		String allString = Utils.leArquivoTexto("jquery.txt");						
 		List<String> listaDeTokens = SeparadorDeTokens.DivideTokens(allString);
 		List<Lexema> lexemas = AnalisadorDeTokens.AnalisaTokens(listaDeTokens);
 		String saida = ConstrutorDeSaida.MontaTabela(lexemas);
@@ -16,22 +14,6 @@ public class Principal {
 		System.out.println(saida);
 		
 		//teste
-		//listaDeTokens.forEach(System.out::println);
-	}
-
-	private static String leArquivoJQuery() throws Exception {
-		Scanner scanner = new Scanner(new File("jquery.txt"));
-		String allString = "";
-		
-		while (scanner.hasNextLine()) {
-			
-			String line = scanner.nextLine();
-			
-			if (!line.trim().startsWith("//")) {
-                allString += line;
-            }
-			
-		}
-		return allString;
+		listaDeTokens.forEach(System.out::println);
 	}
 }
